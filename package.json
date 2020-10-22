@@ -1,0 +1,11 @@
+{
+  "name": "occ-projet-3",
+  "version": "1.0.0",
+  "description": "Projet 3 OpenClassRooms",
+  "main": "index.js",
+  "scripts": {
+    "sass": "sass --watch ./sass/main.scss:./public/css/style.css"
+  },
+  "author": "Micka",
+  "license": "ISC"
+}
