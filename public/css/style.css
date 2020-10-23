@@ -1,11 +1,127 @@
 body {
-  box-sizing: border-box;
-  background: #15DEA5;
+  margin: 0;
+  padding: 0;
+  font-family: "Roboto", sans-serif;
+}
+body h1 {
+  font-family: "Shrikhand", cursive;
 }
 
-h1 {
+h2 {
+  font-size: 1.7rem;
+  font-weight: 900;
+  margin: 40px 0 0 20px;
+  font-family: "Roboto", sans-serif;
+}
+
+.operation_float {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  text-align: center;
+  position: relative;
+  left: -15px;
+  padding: 5px;
   color: #FFFFFF;
-  font-size: 50px;
+  background: #9356DC;
+}
+
+header {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+header h1 {
+  width: 300px;
+  margin: 0;
+  font-weight: 200;
+  text-align: center;
+}
+
+.location {
+  background: #F6F6F6;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0 0 50px 0;
+}
+.location__city {
+  width: 100%;
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #EAEAEA;
+}
+.location__city span {
+  width: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 0 0 70px;
+}
+.location__city input {
+  background: #EAEAEA;
+  font-size: 1em;
+  padding: 10px;
+  border: none;
+}
+.location__city input::placeholder {
+  font-weight: bold;
+}
+.location__container {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px 0 20px 0;
+}
+.location__container h2 {
+  width: 70%;
+}
+.location__container p {
+  width: 80%;
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: grey;
+  margin: 20px 0 60px 0;
+}
+.location__container span {
+  padding: 20px;
+  background: linear-gradient(to bottom right, #FF79DA, #9356DC);
+  border-radius: 30px;
+  color: #FFFFFF;
+  font-weight: bold;
+}
+.location__container a {
+  text-decoration: none;
+}
+
+.operation {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.operation a {
+  text-decoration: none;
+  font-weight: 800;
+}
+.operation i {
+  margin: 0 20px 0 10px;
+  color: grey;
+}
+.operation__bloc {
+  width: 80%;
+  padding: 20px 0 20px 0;
+  margin: 0 0 20px 0;
+  background: #F6F6F6;
+  box-shadow: 3px 3px 5px #EAEAEA;
+  border-radius: 20px;
+  color: #000;
+  font-weight: 800;
+  display: flex;
+  align-items: center;
 }
 
 /*# sourceMappingURL=style.css.map */

@@ -1,0 +1,15 @@
+@mixin primary-font {
+    font-family: 'Shrikhand', cursive;
+}
+
+@mixin secondary-font {
+    font-family: 'Roboto', sans-serif;
+}
+
+@mixin primary-button {
+    padding: 20px;
+    background: linear-gradient(to bottom right, $secondary-color, $primary-color);
+    border-radius: 30px;
+    color: #FFFFFF;
+    font-weight: bold;
+}
