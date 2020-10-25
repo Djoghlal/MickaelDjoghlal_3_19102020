@@ -9,25 +9,13 @@ body {
     & h1 {
         @include primary-font;
     }
-}
 
-h2 {
-    font-size: 1.7rem;
-    font-weight: 900;
-    margin: 40px 0 0 20px;
-    @include secondary-font;
-}
-
-.operation_float {
-    width: 20px;
-    height: 20px;
-    border-radius: 50%;
-    text-align: center;
-    position: relative;
-    left: -15px;
-    padding: 5px;
-    color: #FFFFFF;
-    background: $primary-color;
+    & h2 {
+        font-size: 1.7rem;
+        font-weight: 900;
+        margin: 40px 0 0 20px;
+        @include secondary-font;
+    }
 }
 
 header {
@@ -108,31 +96,76 @@ header {
 }
 
 .operation {
-    padding:20px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    margin: 40px 0 30px 0;
+    padding: 0;
 
-    & a {
-        text-decoration: none;
-        font-weight: 800;
-    }
+    & ul {
+        padding: 0;
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
 
-    & i {
-        margin: 0 20px 0 10px;
-        color: grey;
+        & a {
+            width: 80%;
+            margin: 0 0 20px 0;
+            padding: 20px;
+            text-decoration: none;
+            color: #000;
+            background: $bloc-secondary-color;
+            box-shadow: 5px 5px 10px $bloc-primary-color;
+            border-radius: 15px;
+            
+            & li {
+                width: 90%;
+                font-size: 1.2em;
+                font-weight: 700;
+                margin: 0 0 0 30px;
+
+                & i {
+                    color: grey;
+                    margin: 0 20px 0 0;
+                }
+            }
+        }
+
+        & .a--event {
+            @include primary-color-active;
+
+            & i {
+                color: $primary-color;
+            }
+        }
     }
+}
+
+.operation_float {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    text-align: center;
+    position: relative;
+    left: -15px;
+    padding: 5px;
+    color: #FFFFFF;
+    background: $primary-color;
+}
+
+.restaurants {
+    padding: 25px 0 0 0;
+    background: $bloc-secondary-color;
 
     &__bloc {
         width: 80%;
-        padding: 20px 0 20px 0;
-        margin: 0 0 20px 0;
-        background: $bloc-secondary-color;
-        box-shadow: 3px 3px 5px $bloc-primary-color;
-        border-radius: 20px;
-        color: #000;
-        font-weight: 800;
         display: flex;
+        flex-direction: column;
+        justify-content: center;
         align-items: center;
+        border: 1px solid blue;
+
+        & img {
+            width: 100%;
+            height: 200px;
+        }
     }
 }

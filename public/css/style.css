@@ -6,24 +6,11 @@ body {
 body h1 {
   font-family: "Shrikhand", cursive;
 }
-
-h2 {
+body h2 {
   font-size: 1.7rem;
   font-weight: 900;
   margin: 40px 0 0 20px;
   font-family: "Roboto", sans-serif;
-}
-
-.operation_float {
-  width: 20px;
-  height: 20px;
-  border-radius: 50%;
-  text-align: center;
-  position: relative;
-  left: -15px;
-  padding: 5px;
-  color: #FFFFFF;
-  background: #9356DC;
 }
 
 header {
@@ -98,30 +85,70 @@ header h1 {
 }
 
 .operation {
-  padding: 20px;
+  margin: 40px 0 30px 0;
+  padding: 0;
+}
+.operation ul {
+  padding: 0;
+  list-style: none;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
-.operation a {
-  text-decoration: none;
-  font-weight: 800;
-}
-.operation i {
-  margin: 0 20px 0 10px;
-  color: grey;
-}
-.operation__bloc {
+.operation ul a {
   width: 80%;
-  padding: 20px 0 20px 0;
   margin: 0 0 20px 0;
-  background: #F6F6F6;
-  box-shadow: 3px 3px 5px #EAEAEA;
-  border-radius: 20px;
+  padding: 20px;
+  text-decoration: none;
   color: #000;
-  font-weight: 800;
+  background: #F6F6F6;
+  box-shadow: 5px 5px 10px #EAEAEA;
+  border-radius: 15px;
+}
+.operation ul a li {
+  width: 90%;
+  font-size: 1.2em;
+  font-weight: 700;
+  margin: 0 0 0 30px;
+}
+.operation ul a li i {
+  color: grey;
+  margin: 0 20px 0 0;
+}
+.operation ul .a--event {
+  background-color: rgba(147, 86, 220, 0.1);
+}
+.operation ul .a--event i {
+  color: #9356DC;
+}
+
+.operation_float {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  text-align: center;
+  position: relative;
+  left: -15px;
+  padding: 5px;
+  color: #FFFFFF;
+  background: #9356DC;
+}
+
+.restaurants {
+  padding: 25px 0 0 0;
+  background: #F6F6F6;
+}
+.restaurants__bloc {
+  width: 80%;
   display: flex;
+  flex-direction: column;
+  justify-content: center;
   align-items: center;
+  border: 1px solid blue;
+}
+.restaurants__bloc img {
+  width: 100%;
+  height: 200px;
 }
 
 /*# sourceMappingURL=style.css.map */

@@ -13,3 +13,7 @@
     color: #FFFFFF;
     font-weight: bold;
 }
+
+@mixin primary-color-active {
+    background-color: rgba(147, 86, 220, 0.1);
+}
