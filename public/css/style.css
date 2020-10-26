@@ -218,6 +218,7 @@ header h1 {
   -webkit-background-clip: text;
   color: transparent;
   background-color: #9356DC;
+  cursor: pointer;
 }
 
 footer {
