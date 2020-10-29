@@ -290,9 +290,27 @@ header .header__back {
   border-radius: 20px;
   display: flex;
 }
-.carte__container section ul li .carte-choise {
+.carte__container section ul li .carte-choice {
   flex: 1;
   padding: 20px;
+}
+.carte__container section ul li .carte-choice h4 {
+  font-size: 1.2em;
+  margin: 0;
+}
+.carte__container section ul li .carte-choice .carte-desc {
+  display: flex;
+  align-items: center;
+  padding: 0 0 10px 0;
+}
+.carte__container section ul li .carte-choice .carte-desc p {
+  margin: 0;
+  color: grey;
+  flex: 1;
+}
+.carte__container section ul li .carte-choice .carte-desc .choice-price {
+  margin: 0;
+  font-weight: 800;
 }
 .carte__container section ul li .carte-valide {
   width: 15%;
