@@ -16,6 +16,14 @@ body {
         margin: 40px 0 0 20px;
         @include secondary-font;
     }
+
+    .first-btn {
+        @include primary-button;
+    }
+    
+    .first-btn:hover {
+        @include primary-button--hover;
+    }
 }
 
 header {
@@ -89,14 +97,6 @@ header {
             font-weight: 700;
             color: grey;
             margin: 20px 0 60px 0;
-        }
-
-        & span {
-            @include primary-button;
-        }
-
-        & span:hover {
-            @include primary-button--hover;
         }
 
         & a {
@@ -186,8 +186,21 @@ header {
         align-items: center;
         justify-content: center;
 
-        & figure {
+        & a {
             width: 80%;
+            color: #000;
+            text-decoration: none;
+            font-weight: 700;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        & a:hover .fig-img {
+            opacity: 0.33;
+        }
+
+        & figure {
             background: #FFF;
             margin: 30px 0 0 0;
             padding: 0 0 15px 0;
@@ -214,6 +227,7 @@ header {
                 margin: 0;
                 object-fit: cover;
                 border-radius: 20px 20px 0 0;
+                transition-duration: 0.5s;
             }
 
             & figcaption {
@@ -221,23 +235,9 @@ header {
                 display: flex;
                 align-items: center;
 
-                & a, p {
-                    font-size: 1.1em;
-                }
-
                 & p {
                     margin: 0;
-                }
-
-                & a {
-                    color: #000;
-                    text-decoration: none;
-                    font-weight: 700;
-                    transition-duration: 400ms;
-                }
-
-                & a:hover {
-                    color: $primary-color;
+                    font-size: 1.1em;
                 }
 
                 & div {

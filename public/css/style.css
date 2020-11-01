@@ -12,6 +12,16 @@ body h2 {
   margin: 40px 0 0 20px;
   font-family: "Roboto", sans-serif;
 }
+body .first-btn {
+  padding: 20px 30px 20px 30px;
+  background: linear-gradient(to bottom right, #FF79DA, #9356DC);
+  border-radius: 30px;
+  color: #FFFFFF;
+  font-weight: bold;
+}
+body .first-btn:hover {
+  opacity: 0.9;
+}
 
 header {
   width: 100%;
@@ -77,16 +87,6 @@ header .header__back {
   font-weight: 700;
   color: grey;
   margin: 20px 0 60px 0;
-}
-.location__container span {
-  padding: 20px 30px 20px 30px;
-  background: linear-gradient(to bottom right, #FF79DA, #9356DC);
-  border-radius: 30px;
-  color: #FFFFFF;
-  font-weight: bold;
-}
-.location__container span:hover {
-  opacity: 0.9;
 }
 .location__container a {
   text-decoration: none;
@@ -166,8 +166,19 @@ header .header__back {
   align-items: center;
   justify-content: center;
 }
-.restaurants__container figure {
+.restaurants__container a {
   width: 80%;
+  color: #000;
+  text-decoration: none;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.restaurants__container a:hover .fig-img {
+  opacity: 0.33;
+}
+.restaurants__container figure {
   background: #FFF;
   margin: 30px 0 0 0;
   padding: 0 0 15px 0;
@@ -192,26 +203,16 @@ header .header__back {
   margin: 0;
   object-fit: cover;
   border-radius: 20px 20px 0 0;
+  transition-duration: 0.5s;
 }
 .restaurants__container figure figcaption {
   padding: 10px 0 0 15px;
   display: flex;
   align-items: center;
 }
-.restaurants__container figure figcaption a, .restaurants__container figure figcaption p {
-  font-size: 1.1em;
-}
 .restaurants__container figure figcaption p {
   margin: 0;
-}
-.restaurants__container figure figcaption a {
-  color: #000;
-  text-decoration: none;
-  font-weight: 700;
-  transition-duration: 400ms;
-}
-.restaurants__container figure figcaption a:hover {
-  color: #9356DC;
+  font-size: 1.1em;
 }
 .restaurants__container figure figcaption div {
   flex: 1;
