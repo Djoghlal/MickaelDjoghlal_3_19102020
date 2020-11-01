@@ -7,7 +7,7 @@
 }
 
 @mixin primary-button {
-    padding: 20px;
+    padding: 20px 30px 20px 30px;
     background: linear-gradient(to bottom right, $secondary-color, $primary-color);
     border-radius: 30px;
     color: #FFFFFF;
