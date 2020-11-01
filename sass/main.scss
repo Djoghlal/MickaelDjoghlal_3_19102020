@@ -244,18 +244,12 @@ header {
                     flex: 1;
                 }
 
-                .like-heart {
-                    font-size: 30px;
-                    margin: 0 40px 0 0;
-                    transition-duration: 400ms;
+                .like-button {
+                    @include like-button;
                 }
 
-                .like-heart:hover {
-                    background-clip: text;
-                    -webkit-background-clip: text;
-                    color: transparent;
-                    background-color: $primary-color;
-                    cursor: pointer;
+                .like-button:hover {
+                    @include like-button--hover;
                 }
             }
         }
@@ -292,14 +286,12 @@ header {
                 @include primary-font;
             }
 
-            .carte__heart {
-                font-size: 1.8em;
-                transition-duration: 400ms;
+            .like-button {
+                @include like-button;
             }
 
-            .carte__heart:hover {
-                color: red;
-                cursor: pointer;
+            .like-button:hover {
+                @include like-button--hover;
             }
         }
 
@@ -328,6 +320,18 @@ header {
                     border-radius: 20px;
                     margin: 0 0 20px 0;
                     display: flex;
+
+                    .choice1 {
+                        transition-duration: 2s;
+                    }
+
+                    .choice2 {
+                        transition-duration: 4s;
+                    }
+
+                    .choice3 {
+                        transition-duration: 6s;
+                    }
 
                     .carte-choice {
                         flex: 1;

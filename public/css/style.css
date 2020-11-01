@@ -20,7 +20,8 @@ body .first-btn {
   font-weight: bold;
 }
 body .first-btn:hover {
-  opacity: 0.9;
+  opacity: 0.8;
+  box-shadow: 5px 5px 10px #FFF;
 }
 
 header {
@@ -138,7 +139,7 @@ header .header__back {
   top: -1px;
 }
 .operation ul .a--event {
-  background-color: rgba(147, 86, 220, 0.1);
+  background-color: rgba(89, 44, 143, 0.1);
 }
 .operation ul .a--event i {
   color: #9356DC;
@@ -217,16 +218,16 @@ header .header__back {
 .restaurants__container figure figcaption div {
   flex: 1;
 }
-.restaurants__container figure figcaption .like-heart {
+.restaurants__container figure figcaption .like-button {
   font-size: 30px;
   margin: 0 40px 0 0;
+  color: red;
   transition-duration: 400ms;
 }
-.restaurants__container figure figcaption .like-heart:hover {
+.restaurants__container figure figcaption .like-button:hover {
   background-clip: text;
   -webkit-background-clip: text;
-  color: transparent;
-  background-color: #9356DC;
+  color: #9356DC;
   cursor: pointer;
 }
 
@@ -258,12 +259,16 @@ header .header__back {
   flex: 1;
   font-family: "Shrikhand", cursive;
 }
-.carte__container .carte__container__top .carte__heart {
-  font-size: 1.8em;
+.carte__container .carte__container__top .like-button {
+  font-size: 30px;
+  margin: 0 40px 0 0;
+  color: red;
   transition-duration: 400ms;
 }
-.carte__container .carte__container__top .carte__heart:hover {
-  color: red;
+.carte__container .carte__container__top .like-button:hover {
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: #9356DC;
   cursor: pointer;
 }
 .carte__container section {
@@ -290,6 +295,15 @@ header .header__back {
   border-radius: 20px;
   margin: 0 0 20px 0;
   display: flex;
+}
+.carte__container section ul li .choice1 {
+  transition-duration: 2s;
+}
+.carte__container section ul li .choice2 {
+  transition-duration: 4s;
+}
+.carte__container section ul li .choice3 {
+  transition-duration: 6s;
 }
 .carte__container section ul li .carte-choice {
   flex: 1;
@@ -348,7 +362,8 @@ header .header__back {
 }
 .carte__container section ul .carte-check:hover {
   cursor: pointer;
-  opacity: 0.9;
+  opacity: 0.8;
+  box-shadow: 5px 5px 10px #FFF;
 }
 
 footer {
