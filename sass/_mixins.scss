@@ -26,3 +26,55 @@
 @mixin primary-color-active {
     background-color: rgba(89, 44, 143, 0.1);
 }
+
+@keyframes slideHeaderBack {
+    from {                                  // Point de départ de l'animation
+        transform: translateX(0);
+        opacity: 1;
+    }
+    to {                                    // Point d'arrivée de l'animation
+        transform: translateX(-10px);
+        opacity: .6;
+    }
+}
+
+@keyframes slideBottom {
+    from {                                  // Point de départ de l'animation
+        transform: translateY(30px);
+        opacity: 0;
+    }
+    to {                                    // Point d'arrivée de l'animation
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideLeft {
+    from {                                  // Point de départ de l'animation
+        width: 0%;
+    }
+    to {                                    // Point d'arrivée de l'animation
+        width: 20%;
+    }
+}
+
+@keyframes loading-spinner {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        display: none;
+        opacity: 0;
+    }
+}
+
+@keyframes spinner-load {
+    0% {
+        transform: scale(1) rotate(0deg);
+        animation-delay: 1s;
+    }
+    100% {
+        transform: scale(1) rotate(360deg);
+        animation-duration: 1s;
+    }
+}

@@ -1,7 +1,75 @@
+@keyframes slideHeaderBack {
+  from {
+    transform: translateX(0);
+    opacity: 1;
+  }
+  to {
+    transform: translateX(-10px);
+    opacity: 0.6;
+  }
+}
+@keyframes slideBottom {
+  from {
+    transform: translateY(30px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+@keyframes slideLeft {
+  from {
+    width: 0%;
+  }
+  to {
+    width: 20%;
+  }
+}
+@keyframes loading-spinner {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    display: none;
+    opacity: 0;
+  }
+}
+@keyframes spinner-load {
+  0% {
+    transform: scale(1) rotate(0deg);
+    animation-delay: 1s;
+  }
+  100% {
+    transform: scale(1) rotate(360deg);
+    animation-duration: 1s;
+  }
+}
 body {
   margin: 0;
   padding: 0;
+  position: relative;
   font-family: "Roboto", sans-serif;
+}
+body .loading-spinner {
+  position: absolute;
+  z-index: 2;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: rgba(255, 255, 255, 0.9);
+  animation: loading-spinner 6s forwards;
+  display: flex;
+  justify-content: center;
+}
+body .loading-spinner .spinner-load {
+  position: fixed;
+  top: 15%;
+  font-size: 60px;
+  color: #9356DC;
+  animation: spinner-load 2s;
+  animation-iteration-count: 3;
 }
 body h1 {
   font-family: "Shrikhand", cursive;
@@ -42,6 +110,10 @@ header h1 {
 header .header__back {
   font-size: 1.5em;
   color: #000;
+}
+header .header__back:hover {
+  animation: slideHeaderBack 1s;
+  animation-direction: alternate;
 }
 
 .location {
@@ -106,6 +178,9 @@ header .header__back {
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+.operation ul .operation-active {
+  background: rgba(147, 86, 220, 0.1);
 }
 .operation ul li {
   width: 80%;
@@ -216,6 +291,10 @@ header .header__back {
   margin: 0;
   font-size: 1.1em;
 }
+.restaurants__container figure figcaption .restaurant-desc {
+  color: grey;
+  font-weight: lighter;
+}
 .restaurants__container figure figcaption div {
   flex: 1;
 }
@@ -231,7 +310,7 @@ header .header__back {
   position: relative;
   z-index: 1;
   cursor: pointer;
-  -webkit-text-stroke: 2px white;
+  -webkit-text-stroke: 0.2px #EEEEEE;
 }
 .restaurants__container figure figcaption .like-button .heart-color {
   position: absolute;
@@ -296,7 +375,7 @@ header .header__back {
   position: relative;
   z-index: 1;
   cursor: pointer;
-  -webkit-text-stroke: 2px white;
+  -webkit-text-stroke: 0.2px #EEEEEE;
 }
 .carte__container .carte__container__top .like-button .heart-color {
   position: absolute;
@@ -345,15 +424,6 @@ header .header__back {
   margin: 0 0 20px 0;
   display: flex;
 }
-.carte__container section ul li .choice1 {
-  transition-duration: 2s;
-}
-.carte__container section ul li .choice2 {
-  transition-duration: 4s;
-}
-.carte__container section ul li .choice3 {
-  transition-duration: 6s;
-}
 .carte__container section ul li .carte-choice {
   flex: 1;
   padding: 20px;
@@ -383,17 +453,31 @@ header .header__back {
   font-weight: 800;
 }
 .carte__container section ul li .carte-valide {
-  width: 15%;
+  width: 20%;
   display: flex;
   align-items: center;
   justify-content: center;
   background: #99E2D0;
   border-radius: 0 20px 20px 0;
   display: none;
+  transition-duration: 0.5s;
+  animation: slideLeft 0.5s;
 }
 .carte__container section ul li .carte-valide .fas-circle {
   font-size: 1.5em;
   color: #FFF;
+}
+.carte__container section ul .carte-1 {
+  animation: slideBottom 0.5s;
+}
+.carte__container section ul .carte-2 {
+  animation: slideBottom 1s;
+}
+.carte__container section ul .carte-3 {
+  animation: slideBottom 1.5s;
+}
+.carte__container section ul .carte-4 {
+  animation: slideBottom 2s;
 }
 .carte__container section ul li:hover {
   cursor: pointer;

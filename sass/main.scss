@@ -4,7 +4,30 @@
 body {
     margin: 0;
     padding: 0;
+    position: relative;
     @include secondary-font;
+
+    .loading-spinner {
+        position: absolute;
+        z-index: 2;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        background: rgba(255, 255, 255, .9);
+        animation: loading-spinner 6s forwards;
+        display: flex;
+        justify-content: center;
+
+        .spinner-load {
+            position: fixed;
+            top: 15%;
+            font-size: 60px;
+            color: $primary-color;
+            animation: spinner-load 2s;
+            animation-iteration-count: 3;
+        }
+    }
 
     & h1 {
         @include primary-font;
@@ -42,6 +65,11 @@ header {
     .header__back {
         font-size: 1.5em;
         color: #000;
+    }
+
+    .header__back:hover {
+        animation: slideHeaderBack 1s;
+        animation-direction: alternate;
     }
 }
 
@@ -115,6 +143,10 @@ header {
         display: flex;
         flex-direction: column;
         align-items: center;
+
+        .operation-active {
+            background: rgba(147, 86, 220, .1);
+        }
 
         & li {
             width: 80%;
@@ -237,6 +269,11 @@ header {
                     font-size: 1.1em;
                 }
 
+                .restaurant-desc {
+                    color: grey;
+                    font-weight: lighter;
+                }
+
                 & div {
                     flex: 1;
                 }
@@ -254,7 +291,7 @@ header {
                         position: relative;
                         z-index: 1;
                         cursor: pointer;
-                        -webkit-text-stroke: 2px white;
+                        -webkit-text-stroke: .2px #EEEEEE;
                     }
             
                     .heart-color {
@@ -305,6 +342,7 @@ header {
         margin: 0 0 -30px 0;
         background: $bloc-primary-color;
 
+
         .carte__container__top {
             display: flex;
             align-items: center;
@@ -330,7 +368,7 @@ header {
                     position: relative;
                     z-index: 1;
                     cursor: pointer;
-                    -webkit-text-stroke: 2px white;
+                    -webkit-text-stroke: .2px #EEEEEE;
                 }
 
                 .heart-color {
@@ -386,18 +424,6 @@ header {
                     margin: 0 0 20px 0;
                     display: flex;
 
-                    .choice1 {
-                        transition-duration: 2s;
-                    }
-
-                    .choice2 {
-                        transition-duration: 4s;
-                    }
-
-                    .choice3 {
-                        transition-duration: 6s;
-                    }
-
                     .carte-choice {
                         flex: 1;
                         padding: 20px;
@@ -434,19 +460,37 @@ header {
                     }
 
                     .carte-valide {
-                        width: 15%;
+                        width: 20%;
                         display: flex;
                         align-items: center;
                         justify-content: center;
                         background: $tertiary-color;
                         border-radius: 0 20px 20px 0;
                         display: none;
+                        transition-duration: .5s;
+                        animation: slideLeft .5s;
 
                         .fas-circle {
                             font-size: 1.5em;
                             color: #FFF;
                         }
                     }
+                }
+
+                .carte-1 {
+                    animation: slideBottom .5s;
+                }
+
+                .carte-2 {
+                    animation: slideBottom 1s;
+                }
+
+                .carte-3 {
+                    animation: slideBottom 1.5s;
+                }
+
+                .carte-4 {
+                    animation: slideBottom 2s;
                 }
 
                 & li:hover {
