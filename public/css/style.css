@@ -13,11 +13,14 @@ body h2 {
   font-family: "Roboto", sans-serif;
 }
 body .first-btn {
+  width: 200px;
+  margin: 0px auto;
   padding: 20px 30px 20px 30px;
   background: linear-gradient(to bottom right, #FF79DA, #9356DC);
   border-radius: 30px;
   color: #FFFFFF;
   font-weight: bold;
+  text-align: center;
 }
 body .first-btn:hover {
   opacity: 0.8;
@@ -104,39 +107,36 @@ header .header__back {
   flex-direction: column;
   align-items: center;
 }
-.operation ul a {
+.operation ul li {
   width: 80%;
   margin: 0 0 20px 0;
   padding: 20px;
-  text-decoration: none;
-  color: #000;
   background: #F6F6F6;
   box-shadow: 5px 5px 10px #EAEAEA;
   border-radius: 15px;
-  display: flex;
+  position: relative;
 }
-.operation ul a li {
-  width: 90%;
-  font-size: 1.2em;
-  font-weight: 700;
-  margin: 0 0 0 10px;
-}
-.operation ul a li i {
-  color: grey;
-  margin: 0 20px 0 0;
-}
-.operation ul a span {
+.operation ul li span {
   width: 10px;
   height: 10px;
-  position: relative;
   padding: 8px;
   border-radius: 50px;
   display: flex;
   align-items: center;
   background: #9356DC;
   color: #FFF;
-  left: -30px;
-  top: -1px;
+  position: absolute;
+  top: 15px;
+  left: -12px;
+}
+.operation ul li a {
+  text-decoration: none;
+  color: #000;
+  font-weight: 700;
+}
+.operation ul li a i {
+  color: grey;
+  margin: 0 20px 0 20px;
 }
 .operation ul .a--event {
   background-color: rgba(89, 44, 143, 0.1);
@@ -181,6 +181,7 @@ header .header__back {
 }
 .restaurants__container figure {
   background: #FFF;
+  position: relative;
   margin: 30px 0 0 0;
   padding: 0 0 15px 0;
   border-radius: 20px;
@@ -192,11 +193,11 @@ header .header__back {
   padding: 5px 10px 5px 10px;
   font-size: 0.9em;
   font-weight: 700;
-  position: relative;
+  position: absolute;
   margin: 0;
   z-index: 1;
-  bottom: 240px;
-  left: 290px;
+  top: 15px;
+  right: 15px;
 }
 .restaurants__container figure img {
   width: 100%;
@@ -219,16 +220,40 @@ header .header__back {
   flex: 1;
 }
 .restaurants__container figure figcaption .like-button {
-  font-size: 30px;
-  margin: 0 40px 0 0;
-  color: red;
-  transition-duration: 400ms;
+  position: absolute;
+  right: 20px;
+  bottom: 20px;
 }
-.restaurants__container figure figcaption .like-button:hover {
-  background-clip: text;
-  -webkit-background-clip: text;
-  color: #9356DC;
+.restaurants__container figure figcaption .like-button .fa-heart {
+  font-size: 30px;
+}
+.restaurants__container figure figcaption .like-button .heart {
+  position: relative;
+  z-index: 1;
   cursor: pointer;
+  -webkit-text-stroke: 2px white;
+}
+.restaurants__container figure figcaption .like-button .heart-color {
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: -1;
+  background: linear-gradient(#FF79DA, #9356DC);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  opacity: 0;
+  transform: scale(0);
+  transition: 0.6s ease;
+}
+.restaurants__container figure figcaption .like-button .heart:hover .heart-color {
+  transform: scale(1);
+  opacity: 1;
+}
+.restaurants__container figure figcaption .like-button .heart:hover {
+  background: linear-gradient(#FF79DA, #9356DC);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -webkit-text-stroke: 0px white;
 }
 
 .carte {
@@ -244,7 +269,7 @@ header .header__back {
   position: relative;
   top: -30px;
   border-radius: 30px 30px 0 0;
-  padding: 20px;
+  padding: 20px 20px 80px 20px;
   margin: 0 0 -30px 0;
   background: #EAEAEA;
 }
@@ -260,16 +285,40 @@ header .header__back {
   font-family: "Shrikhand", cursive;
 }
 .carte__container .carte__container__top .like-button {
-  font-size: 30px;
-  margin: 0 40px 0 0;
-  color: red;
-  transition-duration: 400ms;
+  position: absolute;
+  right: 25px;
+  top: 25px;
 }
-.carte__container .carte__container__top .like-button:hover {
-  background-clip: text;
-  -webkit-background-clip: text;
-  color: #9356DC;
+.carte__container .carte__container__top .like-button .fa-heart {
+  font-size: 30px;
+}
+.carte__container .carte__container__top .like-button .heart {
+  position: relative;
+  z-index: 1;
   cursor: pointer;
+  -webkit-text-stroke: 2px white;
+}
+.carte__container .carte__container__top .like-button .heart-color {
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: -1;
+  background: linear-gradient(#FF79DA, #9356DC);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  opacity: 0;
+  transform: scale(0);
+  transition: 0.6s ease;
+}
+.carte__container .carte__container__top .like-button .heart:hover .heart-color {
+  transform: scale(1);
+  opacity: 1;
+}
+.carte__container .carte__container__top .like-button .heart:hover {
+  background: linear-gradient(#FF79DA, #9356DC);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -webkit-text-stroke: 0px white;
 }
 .carte__container section {
   display: flex;
@@ -352,15 +401,17 @@ header .header__back {
 .carte__container section ul li:hover .carte-valide {
   display: flex;
 }
-.carte__container section ul .carte-check {
-  margin: 20px 0 20px 0;
+.carte__container section .carte-check {
+  width: 200px;
+  margin: 0px auto;
   padding: 20px 30px 20px 30px;
   background: linear-gradient(to bottom right, #FF79DA, #9356DC);
   border-radius: 30px;
   color: #FFFFFF;
   font-weight: bold;
+  text-align: center;
 }
-.carte__container section ul .carte-check:hover {
+.carte__container section .carte-check:hover {
   cursor: pointer;
   opacity: 0.8;
   box-shadow: 5px 5px 10px #FFF;

@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="./public/css/style.css">
-    <link rel="stylesheet" media="all and (min-width: 767px)" href="./public/css/desktop.css">
+    <link rel="stylesheet" type="text/css" href="./public/css/style.css">
+    <link rel="stylesheet" type="text/css" media="all and (min-width: 767px)" href="./public/css/desktop.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400&family=Shrikhand&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/e8c72cd5e7.js" crossorigin="anonymous"></script>
     <title>OCC Projet 3 - Intégrer Sass et animations</title>
@@ -32,18 +32,18 @@
         <section class="operation">
             <h2>Fonctionnement</h2>
             <ul>
-                <a href="#">
+                <li>
                     <span>1</span>
-                    <li><i class="fas fa-mobile-alt"></i> Choisissez un restaurant</li>
-                </a>
-                <a href="#">
+                    <a href="#"><i class="fas fa-mobile-alt"></i> Choisissez un restaurant</a>
+                </li>
+                <li>
                     <span>2</span>
-                    <li><i class="fas fa-list-ul"></i> Composez votre menu</li>
-                </a>
-                <a href="#" class="a--event">
+                    <a href="#"><i class="fas fa-list-ul"></i> Composez votre menu</a>
+                </li>
+                <li>
                     <span>3</span>
-                    <li><i class="fas fa-store"></i> Dégustez au restaurant</li>
-                </a>
+                    <a href="#"><i class="fas fa-store"></i> Dégustez au restaurant</a>
+                </li>
             </ul>
         </section>
 
@@ -52,41 +52,54 @@
             <div class="restaurants__container">
                 <a href="./pages/palette.html">
                     <figure>
+                        <div class="figure__new">Nouveau</div>
                         <img src="./public/img/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg" class="fig-img" alt="jay-wennington" />
                         <figcaption>
                             <div>
                                 <p>La palette du goût</p>
                                 <p>Ménilmontant</p>
                             </div>
-                            <i class="fas fa-heart like-button"></i>
+                            <div class="like-button">
+                                <i class="far fa-heart heart">
+                                    <i class="fas fa-heart heart-color"></i>  
+                                </i>
+                            </div>
                         </figcaption>
-                    <span class="figure__new">Nouveau</span>
                     </figure>
                 </a>
 
                 <a href="./pages/note.html">
                     <figure>
+                        <div class="figure__new">Nouveau</div>
                         <img src="./public/img/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg" class="fig-img" alt="Stil-u2" />
                         <figcaption>
                             <div>
                                 <p>La note enchantée</p>
                                 <p>Charonne</p>
                             </div>
-                            <i class="fas fa-heart like-button"></i>
+                            <div class="like-button">
+                                <i class="far fa-heart heart">
+                                    <i class="fas fa-heart heart-color"></i>  
+                                </i>
+                            </div>
                         </figcaption>
-                    <span class="figure__new">Nouveau</span>
                     </figure>
                 </a>
 
                 <a href="./pages/french.html">
                     <figure>
+                        <div class="figure__new">Nouveau</div>
                         <img src="./public/img/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg" class="fig-img" alt="Toa Heftiba" />
                         <figcaption>
                             <div>
                                 <p>A la française</p>
                                 <p>Cité Rouge</p>
                             </div>
-                            <i class="fas fa-heart like-button"></i>
+                            <div class="like-button">
+                                <i class="far fa-heart heart">
+                                    <i class="fas fa-heart heart-color"></i>  
+                                </i>
+                            </div>
                         </figcaption>
                     </figure>
                 </a>
@@ -99,7 +112,11 @@
                                 <p>Le délice des sens</p>
                                 <p>Folie-Méricourt</p>
                             </div>
-                            <i class="fas fa-heart like-button"></i>
+                            <div class="like-button">
+                                <i class="far fa-heart heart">
+                                    <i class="fas fa-heart heart-color"></i>  
+                                </i>
+                            </div>
                         </figcaption>
                     </figure>
                 </a>

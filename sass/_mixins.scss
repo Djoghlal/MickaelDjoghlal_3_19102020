@@ -7,11 +7,14 @@
 }
 
 @mixin primary-button {
+    width: 200px;
+    margin: 0px auto;
     padding: 20px 30px 20px 30px;
     background: linear-gradient(to bottom right, $secondary-color, $primary-color);
     border-radius: 30px;
     color: #FFFFFF;
     font-weight: bold;
+    text-align: center;
 }
 
 @mixin primary-button--hover {
@@ -22,18 +25,4 @@
 
 @mixin primary-color-active {
     background-color: rgba(89, 44, 143, 0.1);
-}
-
-@mixin like-button {
-    font-size: 30px;
-    margin: 0 40px 0 0;
-    color: red;
-    transition-duration: 400ms;
-}
-
-@mixin like-button--hover {
-    background-clip: text;
-    -webkit-background-clip: text;
-    color: #9356DC;
-    cursor: pointer;
 }

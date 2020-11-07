@@ -116,41 +116,38 @@ header {
         flex-direction: column;
         align-items: center;
 
-        & a {
+        & li {
             width: 80%;
             margin: 0 0 20px 0;
             padding: 20px;
-            text-decoration: none;
-            color: #000;
             background: $bloc-secondary-color;
             box-shadow: 5px 5px 10px $bloc-primary-color;
             border-radius: 15px;
-            display: flex;
-            
-            & li {
-                width: 90%;
-                font-size: 1.2em;
-                font-weight: 700;
-                margin: 0 0 0 10px;
-
-                & i {
-                    color: grey;
-                    margin: 0 20px 0 0;
-                }
-            }
+            position: relative;
 
             & span {
                 width: 10px;
                 height: 10px;
-                position: relative;
                 padding: 8px;
                 border-radius: 50px;
                 display: flex;
                 align-items: center;
                 background: $primary-color;
                 color: #FFF;
-                left: -30px;
-                top: -1px;
+                position: absolute;
+                top: 15px;
+                left: -12px;
+            }
+
+            & a {
+                text-decoration: none;
+                color: #000;
+                font-weight: 700;
+
+                & i {
+                    color: grey;
+                    margin: 0 20px 0 20px;
+                }
             }
         }
 
@@ -202,23 +199,23 @@ header {
 
         & figure {
             background: #FFF;
+            position: relative;
             margin: 30px 0 0 0;
             padding: 0 0 15px 0;
             border-radius: 20px;
             box-shadow: 5px 5px 10px $bloc-primary-color;
-            
+
             .figure__new {
                 background-color: #99e2d0;
                 color: #008766;
                 padding: 5px 10px 5px 10px;
                 font-size: 0.9em;
                 font-weight: 700;
-                position: relative;
+                position: absolute;
                 margin: 0;
                 z-index: 1;
-                bottom: 240px;
-                left: 290px;
-
+                top: 15px;
+                right: 15px;
             }
 
             & img {
@@ -245,11 +242,45 @@ header {
                 }
 
                 .like-button {
-                    @include like-button;
-                }
-
-                .like-button:hover {
-                    @include like-button--hover;
+                    position: absolute;
+                    right: 20px;
+                    bottom: 20px;
+            
+                    .fa-heart {
+                        font-size: 30px;
+                    }
+            
+                    .heart {
+                        position: relative;
+                        z-index: 1;
+                        cursor: pointer;
+                        -webkit-text-stroke: 2px white;
+                    }
+            
+                    .heart-color {
+                        position: absolute;
+                        left: 0;
+                        top: 0;
+                        z-index: -1;
+                        background: linear-gradient(#FF79DA, #9356DC);
+                        -webkit-background-clip: text;
+                        -webkit-text-fill-color: transparent;
+                        opacity: 0;
+                        transform: scale(0);
+                        transition: .6s ease;
+                    }
+                    
+                    .heart:hover .heart-color {
+                        transform: scale(1);
+                        opacity: 1;
+                    }
+            
+                    .heart:hover {
+                        background: linear-gradient(#FF79DA, #9356DC);
+                        -webkit-background-clip: text;
+                        -webkit-text-fill-color: transparent;
+                        -webkit-text-stroke: 0px white;
+                    }
                 }
             }
         }
@@ -270,7 +301,7 @@ header {
         position: relative;
         top: -30px;
         border-radius: 30px 30px 0 0;
-        padding: 20px;
+        padding: 20px 20px 80px 20px;
         margin: 0 0 -30px 0;
         background: $bloc-primary-color;
 
@@ -287,11 +318,45 @@ header {
             }
 
             .like-button {
-                @include like-button;
-            }
+                position: absolute;
+                right: 25px;
+                top: 25px;
 
-            .like-button:hover {
-                @include like-button--hover;
+                .fa-heart {
+                    font-size: 30px;
+                }
+
+                .heart {
+                    position: relative;
+                    z-index: 1;
+                    cursor: pointer;
+                    -webkit-text-stroke: 2px white;
+                }
+
+                .heart-color {
+                    position: absolute;
+                    left: 0;
+                    top: 0;
+                    z-index: -1;
+                    background: linear-gradient(#FF79DA, #9356DC);
+                    -webkit-background-clip: text;
+                    -webkit-text-fill-color: transparent;
+                    opacity: 0;
+                    transform: scale(0);
+                    transition: .6s ease;
+                }
+                
+                .heart:hover .heart-color {
+                    transform: scale(1);
+                    opacity: 1;
+                }
+
+                .heart:hover {
+                    background: linear-gradient(#FF79DA, #9356DC);
+                    -webkit-background-clip: text;
+                    -webkit-text-fill-color: transparent;
+                    -webkit-text-stroke: 0px white;
+                }
             }
         }
 
@@ -391,16 +456,15 @@ header {
                 & li:hover .carte-valide {
                     display: flex;
                 }
+            }
 
-                .carte-check {
-                    margin: 20px 0 20px 0;
-                    @include primary-button;
-                }
+            .carte-check {
+                @include primary-button;
+            }
 
-                .carte-check:hover {
-                    cursor: pointer;
-                    @include primary-button--hover;
-                }
+            .carte-check:hover {
+                cursor: pointer;
+                @include primary-button--hover;
             }
         }
     }
