@@ -28,14 +28,22 @@
 }
 @keyframes loading-spinner {
   0% {
+    visibility: hidden;
+    opacity: 0;
+  }
+  5% {
+    visibility: visible;
+    opacity: 1;
+  }
+  99% {
     opacity: 1;
   }
   100% {
-    display: none;
+    visibility: hidden;
     opacity: 0;
   }
 }
-@keyframes spinner-load {
+@keyframes spinner-rotate {
   0% {
     transform: scale(1) rotate(0deg);
     animation-delay: 1s;
@@ -48,28 +56,30 @@
 body {
   margin: 0;
   padding: 0;
-  position: relative;
   font-family: "Roboto", sans-serif;
 }
 body .loading-spinner {
   position: absolute;
-  z-index: 2;
+  z-index: 1;
   top: 0;
   right: 0;
   bottom: 0;
   left: 0;
   background: rgba(255, 255, 255, 0.9);
-  animation: loading-spinner 6s forwards;
-  display: flex;
-  justify-content: center;
+  visibility: hidden;
+  animation: loading-spinner 6s;
 }
-body .loading-spinner .spinner-load {
+body .spinner-container {
   position: fixed;
+  width: 100%;
   top: 15%;
+  text-align: center;
   font-size: 60px;
-  color: #9356DC;
-  animation: spinner-load 2s;
+  animation: spinner-rotate 2s;
   animation-iteration-count: 3;
+}
+body .spinner-container .spinner-load {
+  color: #9356DC;
 }
 body h1 {
   font-family: "Shrikhand", cursive;
@@ -156,11 +166,12 @@ header .header__back:hover {
 }
 .location__container h2 {
   width: 70%;
+  font-weight: 900;
 }
 .location__container p {
   width: 80%;
   font-size: 1.2rem;
-  font-weight: 700;
+  font-weight: 500;
   color: grey;
   margin: 20px 0 60px 0;
 }
@@ -425,12 +436,17 @@ header .header__back:hover {
   display: flex;
 }
 .carte__container section ul li .carte-choice {
+  width: 80%;
   flex: 1;
   padding: 20px;
 }
 .carte__container section ul li .carte-choice h4 {
+  width: 100%;
   font-size: 1.2em;
   margin: 0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 .carte__container section ul li .carte-choice a {
   color: #000;
@@ -440,15 +456,22 @@ header .header__back:hover {
   color: #99E2D0;
 }
 .carte__container section ul li .carte-choice .carte-desc {
+  width: 100%;
   display: flex;
   align-items: center;
+  justify-content: space-between;
+  margin: 0;
 }
 .carte__container section ul li .carte-choice .carte-desc p {
-  margin: 0;
+  width: 90%;
+  margin: 0 5px 0 0;
   color: grey;
-  flex: 1;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 .carte__container section ul li .carte-choice .carte-desc .choice-price {
+  width: 15%;
   margin: 0;
   font-weight: 800;
 }
@@ -484,6 +507,24 @@ header .header__back:hover {
 }
 .carte__container section ul li:hover .carte-valide {
   display: flex;
+}
+.carte__container section ul li:hover .carte-desc {
+  width: 80%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  transition-duration: 0.5s;
+}
+.carte__container section ul li:hover .carte-choice {
+  margin: 0 -18% 0 0;
+  transition-duration: 0.5s;
+}
+.carte__container section ul li:hover .carte-choice h4 {
+  width: 80%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  transition-duration: 0.5s;
 }
 .carte__container section .carte-check {
   width: 200px;

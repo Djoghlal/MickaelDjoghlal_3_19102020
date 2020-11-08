@@ -4,30 +4,33 @@
 body {
     margin: 0;
     padding: 0;
-    position: relative;
     @include secondary-font;
 
     .loading-spinner {
         position: absolute;
-        z-index: 2;
+        z-index: 1;
         top: 0;
         right: 0;
         bottom: 0;
         left: 0;
         background: rgba(255, 255, 255, .9);
-        animation: loading-spinner 6s forwards;
-        display: flex;
-        justify-content: center;
-
-        .spinner-load {
-            position: fixed;
-            top: 15%;
-            font-size: 60px;
-            color: $primary-color;
-            animation: spinner-load 2s;
-            animation-iteration-count: 3;
-        }
+        visibility: hidden;
+        animation: loading-spinner 6s;
     }
+
+        .spinner-container {
+            position: fixed;
+            width: 100%;
+            top: 15%;
+            text-align: center;
+            font-size: 60px;
+            animation: spinner-rotate 2s;
+            animation-iteration-count: 3;
+
+            .spinner-load {
+                color: $primary-color;
+            }
+        }
 
     & h1 {
         @include primary-font;
@@ -117,12 +120,13 @@ header {
 
         & h2 {
             width: 70%;
+            font-weight: 900;
         }
 
         & p {
             width: 80%;
             font-size: 1.2rem;
-            font-weight: 700;
+            font-weight: 500;
             color: grey;
             margin: 20px 0 60px 0;
         }
@@ -425,12 +429,17 @@ header {
                     display: flex;
 
                     .carte-choice {
+                        width: 80%;
                         flex: 1;
                         padding: 20px;
 
                         & h4 {
+                            width: 100%;
                             font-size: 1.2em;
                             margin: 0;
+                            white-space: nowrap;
+                            overflow: hidden;
+                            text-overflow: ellipsis;
                         }
 
                         & a {
@@ -443,16 +452,23 @@ header {
                         }
 
                         & .carte-desc {
+                            width: 100%;
                             display: flex;
                             align-items: center;
+                            justify-content: space-between;
+                            margin: 0;
 
                             & p {
-                                margin: 0;
+                                width: 90%;
+                                margin: 0 5px 0 0;
                                 color: grey;
-                                flex: 1;
+                                white-space: nowrap;
+                                overflow: hidden;
+                                text-overflow: ellipsis;
                             }
 
                             .choice-price {
+                                width: 15%;
                                 margin: 0;
                                 font-weight: 800;
                             }
@@ -499,6 +515,27 @@ header {
 
                 & li:hover .carte-valide {
                     display: flex;
+                }
+
+                & li:hover .carte-desc {
+                    width: 80%;
+                    white-space: nowrap;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                    transition-duration: .5s;
+                }
+
+                & li:hover .carte-choice {
+                    margin: 0 -18% 0 0;
+                    transition-duration: .5s;
+                }
+
+                & li:hover .carte-choice h4 {
+                    width: 80%;
+                    white-space: nowrap;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                    transition-duration: .5s;
                 }
             }
 

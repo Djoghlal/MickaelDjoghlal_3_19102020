@@ -60,15 +60,23 @@
 
 @keyframes loading-spinner {
     0% {
+        visibility: hidden;
+        opacity: 0;
+    }
+    5% {
+        visibility: visible;
+        opacity: 1;
+    }
+    99% {
         opacity: 1;
     }
     100% {
-        display: none;
+        visibility: hidden;
         opacity: 0;
     }
 }
 
-@keyframes spinner-load {
+@keyframes spinner-rotate {
     0% {
         transform: scale(1) rotate(0deg);
         animation-delay: 1s;
