@@ -1,3 +1,69 @@
-body {
-	background: yellow;
+.arrow-top {
+	display: flex !important;
+	justify-content: center;
+	align-items: center;
+	position: fixed;
+	bottom: 200px;
+	width: 50px;
+	height: 50px;
+	font-size: 2em;
+	background: #353535;
+	border-radius: 0 20px 20px 0;
+}
+
+.arrow-top a {
+	display: block;
+	color: #FFF;
+}
+
+main, .restaurants {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.operation, .restaurants__container {
+	width: 768px;
+}
+
+.location, .restaurants {
+	width: 100%;
+}
+       
+
+footer h2 {
+	font-weight: 300;
+}
+
+footer ul {
+	list-style-type: none;
+	padding: 0;
+	display: flex;
+	justify-content: space-around;
+}
+
+footer li {
+	width: 300px;
+	padding: 20px;
+	/* box-shadow: 5px 5px 10px #EAEAEA; */
+	border-radius: 15px;
+	background: rgba(255, 255, 255, .1);
+}
+
+footer li:hover {
+	transform: scale(1.1);
+	transition: transform .5s;
+}
+
+footer li:hover a {
+	color: #99E2D0;
+}
+
+.fa-utensils, .fa-hands-helping {
+	font-size: 1.2em;
+	margin: 0 10px 0 0;
+}
+
+footer a {
+	font-size: 1em;
 }
