@@ -1,28 +1,28 @@
 @keyframes slideHeaderBack {
-  from {
+  0% {
     transform: translateX(0);
     opacity: 1;
   }
-  to {
+  100% {
     transform: translateX(-10px);
     opacity: 0.6;
   }
 }
 @keyframes slideBottom {
-  from {
+  0% {
     transform: translateY(30px);
     opacity: 0;
   }
-  to {
+  100% {
     transform: translateY(0);
     opacity: 1;
   }
 }
 @keyframes slideLeft {
-  from {
+  0% {
     width: 0%;
   }
-  to {
+  100% {
     width: 20%;
   }
 }
@@ -510,9 +510,6 @@ header .header__back:hover {
 }
 .carte__container section ul li:hover {
   cursor: pointer;
-}
-.carte__container section ul li:hover .carte-valide {
-  display: flex;
 }
 .carte__container section ul li:hover .carte-desc {
   width: 80%;
