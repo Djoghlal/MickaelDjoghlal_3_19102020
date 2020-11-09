@@ -28,32 +28,32 @@
 }
 
 @keyframes slideHeaderBack {
-    0% {                                  // Point de départ de l'animation
+    from {                                  // Point de départ de l'animation
         transform: translateX(0);
         opacity: 1;
     }
-    100% {                                    // Point d'arrivée de l'animation
+    to {                                    // Point d'arrivée de l'animation
         transform: translateX(-10px);
         opacity: .6;
     }
 }
 
 @keyframes slideBottom {
-    0% {                                  // Point de départ de l'animation
+    from {                                  // Point de départ de l'animation
         transform: translateY(30px);
         opacity: 0;
     }
-    100% {                                    // Point d'arrivée de l'animation
+    to {                                    // Point d'arrivée de l'animation
         transform: translateY(0);
         opacity: 1;
     }
 }
 
 @keyframes slideLeft {
-    0% {                                  // Point de départ de l'animation
+    from {                                  // Point de départ de l'animation
         width: 0%;
     }
-    100% {                                    // Point d'arrivée de l'animation
+    to {                                    // Point d'arrivée de l'animation
         width: 20%;
     }
 }

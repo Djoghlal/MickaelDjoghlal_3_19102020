@@ -521,6 +521,10 @@ header {
                     cursor: pointer;
                 }
 
+                & li:hover .carte-valide {
+                    display: flex;
+                }
+
                 & li:hover .carte-desc {
                     width: 80%;
                     white-space: nowrap;
