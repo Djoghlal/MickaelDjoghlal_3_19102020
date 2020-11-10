@@ -418,7 +418,16 @@ header {
                 color: grey;
                 text-transform : uppercase;
                 font-weight: 200;
-                border-bottom: 4px solid $tertiary-color;
+            }
+
+            & hr {
+                width: 40px;
+                height: 3px;
+                font-size: 1.4em;
+                margin-left: 0;
+                margin-top: -15px;
+                border: none;
+                background: #99E2D0;
             }
 
             & ul {
