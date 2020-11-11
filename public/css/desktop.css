@@ -3,12 +3,13 @@
 	justify-content: center;
 	align-items: center;
 	position: fixed;
-	bottom: 200px;
-	width: 50px;
-	height: 50px;
-	font-size: 2em;
+	bottom: 220px;
+	right: 0;
+	width: 30px;
+	height: 30px;
+	font-size: 1.2em;
 	background: #353535;
-	border-radius: 0 20px 20px 0;
+	border-radius: 20px 0 0 20px;
 }
 
 .arrow-top a {
@@ -43,9 +44,9 @@ footer ul {
 }
 
 footer li {
-	width: 300px;
-	padding: 20px;
-	/* box-shadow: 5px 5px 10px #EAEAEA; */
+	width: 20%;
+	padding: 10px;
+	margin: 0 10px 0 0;
 	border-radius: 15px;
 	background: rgba(255, 255, 255, .1);
 }
